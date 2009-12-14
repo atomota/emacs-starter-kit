@@ -1,5 +1,4 @@
-;(setq  emacs-root (file-truename "~/.emacs.d/"))
-(setq  emacs-root (file-truename "/home/atom/misc_ws/emacs-starter-kit/"))
+(setq  emacs-root (file-truename "~/.emacs.d/"))
 (setq load-path (cons emacs-root load-path))
 
 (add-to-list 'load-path (concat emacs-root "user-defaults/add-ons/"))
