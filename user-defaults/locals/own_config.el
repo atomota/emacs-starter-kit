@@ -10,10 +10,6 @@
 
 (require 'color-theme)
 
-(if  (eq  system-type 'darwin) 
-  (color-theme-initialize)
-  (setq color-theme-is-global t))
-
 ;(color-theme-clarity)
 (color-theme-blackboard)
 

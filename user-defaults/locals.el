@@ -13,8 +13,10 @@
 	;jde is not part of carbon emacs so load it here
 	;jde depends on packages cedet and elib, they should be served by carbon emacs!
 	(load-file (expand-file-name "/Applications/Emacs.app/Contents/Resources/site-lisp/cedet/common/cedet.el"))
-	(add-to-list 'load-path (concat emacs-root "user-defaults/add-ons/jdee/jde/lisp"))
-    (require 'jde))
+	(add-to-list 'load-path (concat emacs-root "user-defaults/add-ons/jde-2.3.5.1/lisp"))
+        (require 'jde)
+    )
+        
   (progn
     (setq own_german_dict "german-new8")))
 
