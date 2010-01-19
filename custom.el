@@ -3,7 +3,6 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(ecb-layout-name "left-dir-plus-speedbar")
  '(ecb-layout-window-sizes (quote (("left2" (0.19858156028368795 . 0.4807692307692308) (0.19858156028368795 . 0.5)))))
@@ -25,7 +24,6 @@
  '(speedbar-default-position (quote left))
  '(todoo-collapse-items t)
  '(tool-bar-mode nil)
- '(transient-mark-mode t)
  '(vc-delete-logbuf-window nil))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
