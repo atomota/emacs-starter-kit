@@ -1,9 +1,6 @@
 [submodule "user-defaults/add-ons/android-mode"]
 	path = user-defaults/add-ons/android-mode
 	url = git@github.com:atomota/android-mode.git
-[submodule "user-defaults/add-ons/ri-emacs"]
-	path = user-defaults/add-ons/ri-emacs
-	url = git://github.com/pedz/ri-emacs.git
 [submodule "user-defaults/add-ons/anything-config"]
 	path = user-defaults/add-ons/anything-config
 	url = git://repo.or.cz/anything-config.git
