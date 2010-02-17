@@ -16,17 +16,19 @@
 ;;(speedbar-toggle-show-all-files)
 ;;(setq speedbar-show-unknown-files t)
 
-;; use external file to save customizations
-(setq custom-file (concat emacs-root "custom-file.el"))
-
 ;; Ignores starting screen of emacs
 (setq inhibit-splash-screen t)
 
 ;; save bookmarks automatically
 (setq bookmark-save-flag 1)
 
-;; programming ruby/java/c and formating blocks of code
-(global-set-key "\C-xi" 'indent-region)
+;; formating blocks of code (should be done with tab)
+;(global-set-key "\C-xi" 'indent-region)
+
+;; CRTL+SHIFT+? uses dictionary
+(global-set-key (quote [67108927]) (quote dictionary-lookup-definition))
+
+(global-set-key (quote [C-f1]) (quote twitter-get-friends-timeline))
 
 ;; binding buffer-completion to "\M-return"
 (global-set-key "\215" 'dabbrev-expand)
@@ -98,6 +100,5 @@
 
 ;use this for tramp to cache passwords e.g. for ssh sessions
 (setq password-cache-expiry 3600)
-
 
 (provide 'own_config)

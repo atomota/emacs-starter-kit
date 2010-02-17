@@ -4,9 +4,9 @@
 
 (when window-system
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))
-  (tooltip-mode -1)
+;  (tooltip-mode -1)
   (mouse-wheel-mode t)
-  (blink-cursor-mode -1))
+  (blink-cursor-mode t))
 
 (add-hook 'before-make-frame-hook 'turn-off-tool-bar)
 

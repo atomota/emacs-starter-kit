@@ -1,8 +1,8 @@
 ;;  (setq ri-ruby-script "/home/kristof/.xemacs/ri-emacs.rb")
 ;;  (autoload 'ri "/home/kristof/.xemacs/ri-ruby.el" nil t)
 ;
-(setq ri-ruby-script (concat emacs-root "user-defaults/add-ons/ri-emacs/ri-emacs.rb"))
-(autoload 'ri (concat emacs-root "user-defaults/add-ons/ri-emacs/ri-ruby.el"))
+(setq ri-ruby-script (concat emacs-root "user-defaults/add-ons/ri-emacs/current/ri-emacs.rb"))
+(autoload 'ri (concat emacs-root "user-defaults/add-ons/ri-emacs/current/ri-ruby.el"))
 
 ;; bind help to f1,...
 (add-hook 'ruby-mode-hook (lambda ()
