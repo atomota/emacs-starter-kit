@@ -9,7 +9,8 @@
 ;;(ido-mode t)
 
 (require 'color-theme)
-(if (equal window-system 'x)
+(if (or (equal window-system 'x)
+        (equal window-system 'mac))
     (progn
       (color-theme-blackboard)
       (menu-bar-mode)))
