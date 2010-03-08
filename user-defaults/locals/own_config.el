@@ -9,9 +9,10 @@
 ;;(ido-mode t)
 
 (require 'color-theme)
-
-;(color-theme-clarity)
-(color-theme-blackboard)
+(if (equal window-system 'x)
+    (progn
+      (color-theme-blackboard)
+      (menu-bar-mode)))
 
 ;;(speedbar-toggle-show-all-files)
 ;;(setq speedbar-show-unknown-files t)

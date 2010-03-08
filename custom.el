@@ -16,7 +16,6 @@
  '(javascript-auto-indent-flag nil)
  '(jde-complete-function (quote jde-complete-minibuf))
  '(majmodpri-no-nxml nil)
- '(menu-bar-mode t)
  '(org-agenda-files (quote ("~/Documents/org/todo.org")))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
