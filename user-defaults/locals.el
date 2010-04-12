@@ -16,6 +16,7 @@
   (progn
     (setq own_german_dict "german-new8")))
 
+(require 'ij)
 (require 'android-mode)
 (require 'own_config)
 (require 'own_nxhtml)
