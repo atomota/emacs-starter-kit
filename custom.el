@@ -13,6 +13,7 @@
  '(ecb-windows-width 0.2)
  '(ediff-split-window-function (quote split-window-horizontally))
  '(grep-find-command "find . -type f -not -name \"*.svn-base\" -and -not -name \"*~\" -print0 | xargs -0 -e grep -n -s -F ")
+ '(ispell-dictionary "american")
  '(javascript-auto-indent-flag nil)
  '(jde-complete-function (quote jde-complete-minibuf))
  '(majmodpri-no-nxml nil)

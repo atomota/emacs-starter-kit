@@ -19,7 +19,10 @@
 (require 'ij)
 (require 'android-mode)
 (require 'own_config)
-(require 'own_nxhtml)
+
+;try to use defaults by starter kit as config caused lagging when
+;editing html/js files
+;(require 'own_nxhtml)
 (require 'own_ruby)
 (require 'own_rinari)
 (require 'own_css)
