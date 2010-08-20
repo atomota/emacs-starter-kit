@@ -1,8 +1,6 @@
 ;; Setup to get sane flyspell everywhere
 (require 'flyspell)
 
-;; SVN
-(require 'vc-svn)
 
 ;;InteractivelyDoThings
 ;;(require 'ido)
