@@ -11,8 +11,10 @@
     (force-flyspell-mode)
 ))
 
+(setq org-directory "~/Documents/org")
 (setq org-agenda-files (quote ("~/Documents/org/")))
-(setq org-mobile-directory "~/Documents/org/stage/")
+(setq org-mobile-directory "~/Documents/org/stage")
+(setq org-mobile-inbox-for-pull "~/Documents/org/from-mobile.org")
 
 ;; add hooks for own webdav/ssh sync
 (add-hook 'org-mobile-post-push-hook
