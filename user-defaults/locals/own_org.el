@@ -6,9 +6,10 @@
 
 
 (add-hook 'org-mode-hook (lambda ()
-    (ispell-change-dictionary own_german_dict nil)
-    (local-set-key '[C-return] 'ispell-complete-word)
-    (force-flyspell-mode)
+    ;(ispell-change-dictionary own_german_dict nil)
+    ;(local-set-key '[C-return] 'ispell-complete-word)
+    ;(force-flyspell-mode)
+    (flyspell-mode 0) 
 ))
 
 (setq org-directory "~/Documents/org")

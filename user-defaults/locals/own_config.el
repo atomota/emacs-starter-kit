@@ -1,7 +1,6 @@
 ;; Setup to get sane flyspell everywhere
 (require 'flyspell)
 
-
 ;;InteractivelyDoThings
 ;;(require 'ido)
 ;;(ido-mode t)
@@ -10,8 +9,9 @@
 (if (or (equal window-system 'x)
         (equal window-system 'mac))
     (progn
-      (color-theme-blackboard)
-      (menu-bar-mode)))
+      (if (eq system-type 'windows-nt)
+          (color-theme-zenburn)
+        (color-theme-blackboard))))
 
 ;;(speedbar-toggle-show-all-files)
 ;;(setq speedbar-show-unknown-files t)
@@ -100,7 +100,5 @@
 
 ;use this for tramp to cache passwords e.g. for ssh sessions
 (setq password-cache-expiry 3600)
-
-
 
 (provide 'own_config)
