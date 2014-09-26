@@ -22,11 +22,13 @@
   "Show secrets"
   (interactive (list (read-passwd "Password: ")))
   (save-excursion
-	(setenv "MSGPWD" password)
+    (if (bufferp (get-buffer "mysecretgarden")) 
+        (kill-buffer "mysecretgarden") nil)
+	(setenv "MSGPWD" password)    
 	(shell-command "openssl enc -a -aes-128-cbc -d -in ~/.mysecretgarden -salt -pass env:MSGPWD" "mysecretgarden")
 	(setenv "MSGPWD")
 	(set-buffer "mysecretgarden")
-	(toggle-read-only))
-  (other-window 1))
+    ;(switch-to-buffer "mysecretgarden")
+	(toggle-read-only)))
 
 (provide 'mysecretgarden)
