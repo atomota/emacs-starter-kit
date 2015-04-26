@@ -1,1 +1,0 @@
-(find-file "~/Documents/org/todo.org")
