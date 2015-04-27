@@ -26,9 +26,11 @@
   (when (fboundp 'scroll-bar-mode)
     (scroll-bar-mode -1))
 
+  ;; files are unique in buffers by putting part of it's directory name before
   (require 'uniquify)
   (setq uniquify-buffer-name-style 'forward)
 
+  ;; returns to the same point of file when visiting again
   (require 'saveplace)
   (setq-default save-place t)
 
@@ -65,7 +67,7 @@
   (setq backup-directory-alist `(("." . ,(expand-file-name
                                           (concat dotfiles-dir "backups")))))
 
-  ;; Setup to get sane flyspell everywhere
+  ;; setup to get sane flyspell everywhere
   (require 'flyspell)
   ;; force flyspell mode to be active
   (defun force-flyspell-mode ()
