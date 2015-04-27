@@ -9,9 +9,12 @@
 ;; binding also completion to "\M-return"
 (global-set-key "\215" 'hippie-expand)
 
-
 ;; Perform general cleanup.
 (global-set-key (kbd "C-c n") 'cleanup-buffer)
+
+;; some bookmark binding
+(define-key global-map [f5] 'bookmark-set)
+(define-key global-map [f6] 'bookmark-jump)
 
 ;; Turn on the menu bar for exploring new modes
 (global-set-key (kbd "C-<f10>") 'menu-bar-mode)
@@ -46,6 +49,14 @@
 (global-set-key (kbd "C-x O") (lambda () (interactive) (other-window -1))) ;; back one
 (global-set-key (kbd "C-x C-o") (lambda () (interactive) (other-window 2))) ;; forward two
 
+;; jump windows for and backward with shift + cursor up/down
+(defun other-window-backward (n)
+  "Select Nth previous window."
+  (interactive "p")
+  (other-window (- n)))
+(global-set-key [(shift down)] 'other-window)
+(global-set-key [(shift up)] 'other-window-backward)
+
 ;; Start eshell or switch to it if it's active.
 (global-set-key (kbd "C-x m") 'eshell)
 
@@ -62,10 +73,6 @@
 
 (global-set-key "\C-x\C-y" 'anything)
 
-;; some bookmark binding
-(define-key global-map [f5] 'bookmark-set)
-(define-key global-map [f6] 'bookmark-jump)
-
 (global-set-key "\M-g" 'goto-line)
 
 ;; open URLS by clicking with mouse + shift
@@ -73,13 +80,5 @@
 
 ;add imenu to mouse 3
 (global-set-key [M-S-mouse-3] 'imenu)
-
-;; jump windows for and backward with shift + cursor up/down
-(defun other-window-backward (n)
-  "Select Nth previous window."
-  (interactive "p")
-  (other-window (- n)))
-(global-set-key [(shift down)] 'other-window)
-(global-set-key [(shift up)] 'other-window-backward)
 
 (provide 'global-key-bindings)
