@@ -4,7 +4,6 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
-
 (add-hook 'org-mode-hook (lambda ()
     ;(ispell-change-dictionary own_german_dict nil)
     ;(local-set-key '[C-return] 'ispell-complete-word)
@@ -35,9 +34,6 @@
   (interactive)
   (org-mobile-pull)
   (org-mobile-push))
-
-(define-key global-map [f10] 'my-org-mobile-sync-pull-and-push)
-
 
 (defun my-org-mobile-sync-start ()
   "Start automated `org-mobile-push'"
