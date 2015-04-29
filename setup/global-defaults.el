@@ -1,8 +1,4 @@
 (progn  
-  ;; use ido
-  (ido-mode t)
-  (setq ido-enable-flex-matching t
-        ido-use-filename-at-point 'guess)
 
   ;; character encoding
   (prefer-coding-system 'utf-8)
@@ -15,37 +11,6 @@
   ;; tabs
   (setq-default indent-tabs-mode nil)
   (setq default-tab-width 4)
-
-  (ansi-color-for-comint-mode-on)
-
-  ;; Transparently open compressed files
-  (auto-compression-mode t)
-
-  ;; no menu bar, no tool bar and no scroll bars
-  (menu-bar-mode -1)
-  (when (fboundp 'tool-bar-mode)
-    (tool-bar-mode -1))
-  (when (fboundp 'scroll-bar-mode)
-    (scroll-bar-mode -1))
-
-  ;; show file size, cursor's line and column position at the bottom
-  (line-number-mode)
-  (column-number-mode)
-  (size-indication-mode)
-  
-  ;; files are unique in buffers by putting part of it's directory name before
-  (require 'uniquify)
-  (setq uniquify-buffer-name-style 'forward)
-
-  ;; returns to the same point of file when visiting again
-  (require 'saveplace)
-  (setq-default save-place t)
-
-  ;; highlight matching parentheses when the point is on them.
-  (show-paren-mode 1)
-
-  ;; enable mouse wheel support
-  (mouse-wheel-mode t)
 
   (setq x-select-enable-clipboard t
         x-select-enable-primary t
@@ -69,19 +34,51 @@
   ;; default major mode
   (setq default-major-mode 'text-mode)
   
-  ;; get rid of those annoying ## files
-  (auto-save-mode nil) 
-  
   ;; use this for tramp to cache passwords e.g. for ssh sessions
   (setq password-cache-expiry 3600)
-  
-  ;; always print "emacs" and current file name in window title
-  (when window-system
-    (setq frame-title-format '("emacs - " (buffer-file-name "%f" ("%b")))))
 
   ;; Don't clutter up directories with files~
   (setq backup-directory-alist `(("." . ,(expand-file-name
                                           (concat dotfiles-dir "backups")))))
+  
+  (ansi-color-for-comint-mode-on)
+
+  ;; Transparently open compressed files
+  (auto-compression-mode t)
+
+  ;; use ido
+  (ido-mode t)
+  (setq ido-enable-flex-matching t
+        ido-use-filename-at-point 'guess)
+
+  ;; no menu bar, no tool bar and no scroll bars
+  (menu-bar-mode -1)
+  (when (fboundp 'tool-bar-mode)
+    (tool-bar-mode -1))
+  (when (fboundp 'scroll-bar-mode)
+    (scroll-bar-mode -1))
+
+  ;; show file size, cursor's line and column position at the bottom
+  (line-number-mode)
+  (column-number-mode)
+  (size-indication-mode)
+
+  ;; highlight matching parentheses when the point is on them.
+  (show-paren-mode 1)
+
+  ;; enable mouse wheel support
+  (mouse-wheel-mode t)
+
+  ;; get rid of those annoying ## files
+  (auto-save-mode nil) 
+    
+  ;; files are unique in buffers by putting part of it's directory name before
+  (require 'uniquify)
+  (setq uniquify-buffer-name-style 'forward)
+
+  ;; returns to the same point of file when visiting again
+  (require 'saveplace)
+  (setq-default save-place t)
 
   ;; setup to get sane flyspell everywhere
   (require 'flyspell)
@@ -90,14 +87,9 @@
     "Activates flyspell-mode, whether already active or not."
     (flyspell-mode 1))
 
-  (require 'color-theme)
-  (if (or (equal window-system 'x)
-          (equal window-system 'mac))
-      (progn
-        (if (eq system-type 'windows-nt)
-            (color-theme-zenburn)
-          (color-theme-blackboard))))
-
+  ;; always print "emacs" and current file name in window title
+  (when window-system
+    (setq frame-title-format '("emacs - " (buffer-file-name "%f" ("%b")))))
   
   (server-start))
 (provide 'global-defaults)
