@@ -1,5 +1,4 @@
-(progn
-
+(progn  
   ;; use ido
   (ido-mode t)
   (setq ido-enable-flex-matching t
@@ -26,6 +25,11 @@
   (when (fboundp 'scroll-bar-mode)
     (scroll-bar-mode -1))
 
+  ;; show file size, cursor's line and column position at the bottom
+  (line-number-mode)
+  (column-number-mode)
+  (size-indication-mode)
+  
   ;; files are unique in buffers by putting part of it's directory name before
   (require 'uniquify)
   (setq uniquify-buffer-name-style 'forward)
