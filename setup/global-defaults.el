@@ -9,6 +9,9 @@
   (set-terminal-coding-system 'utf-8)
   (set-keyboard-coding-system 'utf-8)
 
+  (set-default 'indicate-empty-lines t)
+  (set-default 'imenu-auto-rescan t)
+
   ;; tabs
   (setq-default indent-tabs-mode nil)
   (setq default-tab-width 4)
@@ -59,10 +62,19 @@
         color-theme-is-global t
         truncate-partial-width-windows nil
         xterm-mouse-mode t)
-  
-  (set-default 'indicate-empty-lines t)
-  (set-default 'imenu-auto-rescan t)
 
+  ;; save bookmarks automatically
+  (setq bookmark-save-flag 1)
+  
+  ;; default major mode
+  (setq default-major-mode 'text-mode)
+  
+  ;; get rid of those annoying ## files
+  (auto-save-mode nil) 
+  
+  ;; use this for tramp to cache passwords e.g. for ssh sessions
+  (setq password-cache-expiry 3600)
+  
   ;; always print "emacs" and current file name in window title
   (when window-system
     (setq frame-title-format '("emacs - " (buffer-file-name "%f" ("%b")))))
@@ -86,17 +98,6 @@
             (color-theme-zenburn)
           (color-theme-blackboard))))
 
-  ;; save bookmarks automatically
-  (setq bookmark-save-flag 1)
-  
-  ;; default major mode
-  (setq default-major-mode 'text-mode)
-  
-  ;; get rid of those annoying ## files
-  (auto-save-mode nil) 
-  
-  ;; use this for tramp to cache passwords e.g. for ssh sessions
-  (setq password-cache-expiry 3600)
   
   (server-start))
 (provide 'global-defaults)
