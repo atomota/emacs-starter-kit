@@ -14,7 +14,7 @@
 		  (kill-buffer "mysecretgarden") nil)
 	  (setenv "MSGPWD" password)
 	  ;; TODO if process exits abnormally e.g. return code>1 then print message
-	  (start-process "my-secret-garden" "*Messages*" "~/.emacs.d/msg-edit.sh" "~/.mysecretgarden")
+	  (start-process "my-secret-garden" "*Messages*" "bash" "--init-file" "~/.emacs.d/msg-edit.sh")
 	  (setenv "MSGPWD"))
 	(switch-to-buffer "*Messages*"))
 

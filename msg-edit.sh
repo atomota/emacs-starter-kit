@@ -1,5 +1,5 @@
 #/bin/bash
-eval crypt_file=$1
+crypt_file=~/.mysecretgarden
 plain_file="/tmp/.mysecretgarden$$"
 
 sumask=$(umask)
