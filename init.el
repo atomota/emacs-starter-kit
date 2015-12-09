@@ -34,3 +34,4 @@
   (mapc #'load (directory-files user-specific-dir nil ".*el$")))
 
 (if (file-exists-p user-specific-config) (load user-specific-config))
+(put 'upcase-region 'disabled nil)
