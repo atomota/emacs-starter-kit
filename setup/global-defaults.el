@@ -90,6 +90,13 @@
   ;; always print "emacs" and current file name in window title
   (when window-system
     (setq frame-title-format '("emacs - " (buffer-file-name "%f" ("%b")))))
+
+  ;; TODO remove this when using emacs 25+
+  ;;
+  ;; bug of pasting in emacs.
+  ;; http://debbugs.gnu.org/cgi/bugreport.cgi?bug=16737#17
+  ;; http://ergoemacs.org/misc/emacs_bug_cant_paste_2015.html
+  (setq x-selection-timeout 300)
   
   (server-start))
 (provide 'global-defaults)
