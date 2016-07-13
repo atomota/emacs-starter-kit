@@ -4,8 +4,8 @@
   (if (or (equal window-system 'x)
           (equal window-system 'mac))
       (progn
-        (if (eq system-type 'windows-nt)
-            (color-theme-zenburn)
-          (color-theme-blackboard)))))
+        (if (or (eq system-type 'windows-nt)
+                (eq system-type 'cygwin))
+            (color-theme-zenburn) (color-theme-blackboard)))))
 
 (provide 'own_color_theme)
