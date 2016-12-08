@@ -1,4 +1,9 @@
-;(require 'org-install)
+;; setup local/mobile environment via client-specific config
+;
+;(setq org-directory "~/org")
+;(setq org-agenda-files (quote ("~/org/")))
+;(setq org-mobile-directory "~/mobile-org/")
+;(setq org-mobile-inbox-for-pull "/var/tmp/from-mobile.org")
 
 (setq org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "SOMEDAY(y)" "STARTED(s)" "WAITING(w)" "DELEGATED(l)" "|" "DONE(d)" "CANCELLED(c)")))
 
