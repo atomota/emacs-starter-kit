@@ -1,5 +1,8 @@
 (progn  
 
+  ;; should be fixed with emacs 24.4.x as described in https://bugs.launchpad.net/emacs-snapshot/+bug/1251176
+  (require 'iso-transl)
+
   ;; character encoding
   (prefer-coding-system 'utf-8)
   (set-terminal-coding-system 'utf-8)
