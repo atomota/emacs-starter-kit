@@ -103,6 +103,12 @@
                                  "Donnerstag" "Freitag" "Samstag"]
         calendar-month-name-array ["Januar" "Februar" "März" "April" "Mai"
                                    "Juni" "Juli" "August" "September"
-                                   "Oktober" "November" "Dezember"])  
+                                   "Oktober" "November" "Dezember"])
+
+
+  ;;get rid of alarming
+  (setq ring-bell-function 'ignore)
+  (setq visible-bell nil)
+  
   (server-start))
 (provide 'global-defaults)
