@@ -7,7 +7,7 @@
   ;; further package source marmalade
   (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
   ;; add marmelade packages here
-  (setq my-packages (append my-packages '(ido-ubiquitous smex idle-highlight-mode find-file-in-project multiple-cursors markdown-mode groovy-mode)))
+  (setq my-packages (append my-packages '(ido-ubiquitous smex idle-highlight-mode find-file-in-project multiple-cursors markdown-mode web-mode groovy-mode)))
 
   (package-initialize)
   
