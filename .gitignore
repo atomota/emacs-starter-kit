@@ -25,4 +25,7 @@ bookmarks
 \#*
 history
 .org-id-locations
+network-security.data
+ido.last
 helios.el
+nova.el
