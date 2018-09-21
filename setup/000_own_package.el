@@ -24,7 +24,7 @@
   ;; marmalada packages
   (setq my-packages (append my-packages '(ido-ubiquitous smex idle-highlight-mode find-file-in-project multiple-cursors markdown-mode web-mode groovy-mode)))
   ;; MELPA packages
-  (setq my-packages (append my-packages '(es-mode)))
+  (setq my-packages (append my-packages '(es-mode company yasnippet)))
   
   ;; further package source marmalade
   (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))

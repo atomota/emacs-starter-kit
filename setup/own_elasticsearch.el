@@ -9,4 +9,12 @@
 (setq es-always-pretty-print t)
 (setq es-default-url "http://localhost:9200/")
 
+(add-hook 'es-mode-hook (lambda ()
+                          (yas-minor-mode)
+                          ))
+
+(add-hook 'es-result-mode-hook 'hs-minor-mode)
+
+
 (provide 'own_elasticsearch)
+
