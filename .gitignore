@@ -30,3 +30,6 @@ ido.last
 helios.el
 nova.el
 atm-box.el
+abbrev_defs
+srecode-map.el
+
