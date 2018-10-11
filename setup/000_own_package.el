@@ -5,7 +5,6 @@
   ;;
   ;; https://github.com/flyingmachine/emacs-for-clojure/issues/26
   ;; https://github.com/DarwinAwardWinner/ido-completing-read-plus/issues/35
-
   (defvar ido-cur-item nil)
   (defvar ido-default-item nil)
   (defvar ido-cur-list nil)
@@ -21,13 +20,11 @@
   
   ;; add gnu packages here , see https://elpa.gnu.org/
   (defvar my-packages '(js2-mode))
-  ;; marmalada packages
-  (setq my-packages (append my-packages '(ido-ubiquitous smex idle-highlight-mode find-file-in-project multiple-cursors markdown-mode web-mode groovy-mode)))
+
   ;; MELPA packages
-  (setq my-packages (append my-packages '(es-mode company yasnippet)))
+  (setq my-packages (append my-packages '(groovy-mode web-mode markdown-mode multiple-cursors find-file-in-project idle-highlight-mode es-mode company yasnippet smex)))
   
   ;; further package source marmalade
-  (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
   (add-to-list 'package-archives '("MELPA" . "https://melpa.org/packages/" ))
 
   (package-initialize)
