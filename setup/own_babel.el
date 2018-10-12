@@ -16,5 +16,19 @@
 
 (print org-plantuml-jar-path)
 
+;;https://emacs.stackexchange.com/a/15048
+(add-hook 'org-babel-after-execute-hook
+          (lambda ()
+            (when org-inline-image-overlays
+              (org-redisplay-inline-images))))
+
 (setq org-src-fontify-natively t)
+
+
+;; no plant uml
+(defun my-org-confirm-babel-evaluate (lang body)
+  (not (member lang '("plantuml" "elisp" "gnuplot" ))))
+
+(setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
+
 (provide 'own_babel)
