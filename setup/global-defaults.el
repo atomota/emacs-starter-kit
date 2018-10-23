@@ -74,7 +74,10 @@
 
   ;; get rid of those annoying ## files
   (auto-save-mode nil) 
-    
+
+  ;; update buffers when files where changed from outside : https://stackoverflow.com/questions/1480572/how-to-have-emacs-auto-refresh-all-buffers-when-files-have-changed-on-disk
+  (global-auto-revert-mode t)
+
   ;; files are unique in buffers by putting part of it's directory name before
   (require 'uniquify)
   (setq uniquify-buffer-name-style 'forward)
