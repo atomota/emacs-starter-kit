@@ -16,6 +16,8 @@
 (define-key global-map [f5] 'bookmark-set)
 (define-key global-map [f6] 'bookmark-jump)
 
+(define-key global-map (kbd "C-c c") 'org-capture)
+
 ;; Turn on the menu bar for exploring new modes
 (global-set-key (kbd "C-<f10>") 'menu-bar-mode)
 

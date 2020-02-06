@@ -20,4 +20,15 @@
     (flyspell-mode 0) 
 ))
 
+(setq org-capture-templates
+ '(("t" "Todo" entry (file+headline (concat org-directory "/todo.org") "Tasks")
+        "* TODO %?\n  %i\n  %a")
+   ("j" "Journal" entry (file+datetree (concat org-directory "/journal.org"))
+        "* %?\nEntered on %U\n  %i\n  %a")))
+
+;; https://orgmode.org/manual/TODO-dependencies.html
+(setq org-enforce-todo-dependencies t)
+
+;; TODO reset subtask for recurring TODOs, like this: https://superuser.com/questions/694666/org-mode-repeating-tasks-with-subtasks
+
 (provide 'own_org)
