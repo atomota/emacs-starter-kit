@@ -22,7 +22,7 @@
   (defvar my-packages '(js2-mode))
 
   ;; MELPA packages
-  (setq my-packages (append my-packages '(groovy-mode web-mode markdown-mode multiple-cursors find-file-in-project idle-highlight-mode es-mode company yasnippet smex)))
+  (setq my-packages (append my-packages '(dockerfile-mode groovy-mode web-mode markdown-mode multiple-cursors find-file-in-project idle-highlight-mode es-mode company yasnippet smex)))
   
   ;; further package source marmalade
   (add-to-list 'package-archives '("MELPA" . "https://melpa.org/packages/" ))
