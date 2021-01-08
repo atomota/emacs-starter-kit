@@ -7,7 +7,10 @@
 (add-to-list 'auto-mode-alist '("\\.es$" . es-mode))
 
 (setq es-always-pretty-print t)
-(setq es-default-url "http://localhost:9200/")
+
+
+;(setq es-default-url "localhost:9200")
+(setq es-default-url "http://localhost:9200/_search?pretty=true")
 
 (add-hook 'es-mode-hook (lambda ()
                           (yas-minor-mode)

@@ -4,10 +4,11 @@
 
 
 (org-babel-do-load-languages
- 'org-babel-load-languages '((sh . t)
+ 'org-babel-load-languages '((shell . t)
                              (python . t)
                              (plantuml . t)
                              (gnuplot . t)
+                             (elasticsearch . t)
                              ))
 
 (setq org-plantuml-jar-path
@@ -24,10 +25,9 @@
 
 (setq org-src-fontify-natively t)
 
-
 ;; no plant uml
 (defun my-org-confirm-babel-evaluate (lang body)
-  (not (member lang '("plantuml" "elisp" "gnuplot" ))))
+  (not (member lang '("plantuml" "elisp" "gnuplot" "es" ))))
 
 (setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
 
