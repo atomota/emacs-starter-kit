@@ -1,8 +1,3 @@
-;(require 'org-babel)
-;(require 'org-babel-init)
-;(require 'org-babel-gnuplot)
-
-
 (org-babel-do-load-languages
  'org-babel-load-languages '((shell . t)
                              (python . t)
@@ -30,5 +25,3 @@
   (not (member lang '("plantuml" "elisp" "gnuplot" "es" ))))
 
 (setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
-
-(provide 'own_babel)

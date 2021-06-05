@@ -1,3 +1,5 @@
+.cache
+.lsp-session-*
 .org-id-locations
 .newsrc-dribble
 .nnmail-cache

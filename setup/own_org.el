@@ -1,5 +1,5 @@
-;; setup local/mobile environment by client-specific config
-
+;; Setup local environment by client-specific config
+;;
 ;(setq org-directory "~/org")
 ;(setq org-agenda-files (quote ("~/org/")))
 
@@ -31,4 +31,3 @@
 
 ;; TODO reset subtask for recurring TODOs, like this: https://superuser.com/questions/694666/org-mode-repeating-tasks-with-subtasks
 
-(provide 'own_org)

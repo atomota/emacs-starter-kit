@@ -1,3 +1,5 @@
+(global-set-key (kbd "C-x p f") #'project-find-file)
+
 ;; You know, like Readline.
 (global-set-key (kbd "C-M-h") 'backward-kill-word)
 
@@ -83,4 +85,4 @@
 ;add imenu to mouse 3
 (global-set-key [M-S-mouse-3] 'imenu)
 
-(provide 'global-key-bindings)
+;(provide 'global-key-bindings)

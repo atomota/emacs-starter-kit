@@ -19,5 +19,3 @@
 (add-hook 'es-result-mode-hook 'hs-minor-mode)
 
 
-(provide 'own_elasticsearch)
-

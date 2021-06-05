@@ -4,4 +4,3 @@
 
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 
-(provide 'own_multiple_cursors)
