@@ -25,9 +25,6 @@
   :bind (
 	 ("C-x g" . magit-status)))
 
-(use-package dockerfile-mode
-  :ensure t)
-
 
 (use-package dockerfile-mode
   :ensure t)
