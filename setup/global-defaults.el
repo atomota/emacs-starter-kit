@@ -83,7 +83,9 @@
 (auto-save-mode nil) 
                                         ;(setq auto-save-default nil)
                                         ;(setq make-backup-files nil)
-                                        ;(setq create-lockfiles nil)
+
+; https://stackoverflow.com/questions/23317002/how-to-create-temporary-files-filename-in-tmp-not-working-directory
+(setq create-lockfiles nil)
 
 ;; marked section is removed when pressing key 
 (delete-selection-mode t)
