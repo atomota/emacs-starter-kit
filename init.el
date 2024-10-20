@@ -3,7 +3,9 @@
 
 (setq custom-file (concat dotfiles-dir "custom.el"))
 
-(package-initialize)
+;(package-initialize)
+; seems unnecessary due to following warning after startup
+;  Warning (package): Unnecessary call to ‘package-initialize’ in init file
 
 (require 'cl)
 (require 'saveplace)
