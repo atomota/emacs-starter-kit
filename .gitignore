@@ -1,4 +1,5 @@
 .cache
+eln-cache/*
 .lsp-session-*
 .org-id-locations
 .newsrc-dribble
