@@ -20,12 +20,13 @@
     (flyspell-mode 0) 
 ))
 
-(setq org-capture-templates
- '(("t" "Todo" entry (file+headline (concat org-directory "/todo.org") "Tasks")
-        "* TODO %?\n  %i\n  %a")
-   ("j" "Journal" entry (file+datetree (concat org-directory "/journal.org"))
-        "* %?\nEntered on %U\n  %i\n  %a")))
 
+(setq org-capture-templates
+ '(("t" "Todo" entry (file "todo.org")
+        "* TODO %?\n %U\n%i\nQ: %a")
+   ("j" "Journal" entry (file+datetree "journal.org")
+        "* %?\nT: %U\n%i\nQ: %a")))
+;
 ;; https://orgmode.org/manual/TODO-dependencies.html
 (setq org-enforce-todo-dependencies t)
 
