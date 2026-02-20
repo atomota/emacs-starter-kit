@@ -7,7 +7,8 @@
 ; seems unnecessary due to following warning after startup
 ;  Warning (package): Unnecessary call to ‘package-initialize’ in init file
 
-(require 'cl)
+;outdated - replacement neccessary?
+;(require 'cl)
 (require 'saveplace)
 (require 'ffap)
 (require 'uniquify)
