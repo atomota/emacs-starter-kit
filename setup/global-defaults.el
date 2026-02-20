@@ -131,4 +131,8 @@
 (setq ring-bell-function 'ignore)
 (setq visible-bell nil)
 
+;; use classic paste & copy
+(cua-mode t)
+
+
 (server-start)

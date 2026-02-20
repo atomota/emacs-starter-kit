@@ -30,5 +30,7 @@
 ;; https://orgmode.org/manual/TODO-dependencies.html
 (setq org-enforce-todo-dependencies t)
 
+(setq org-support-shift-select t)
+
 ;; TODO reset subtask for recurring TODOs, like this: https://superuser.com/questions/694666/org-mode-repeating-tasks-with-subtasks
 
